@@ -21,7 +21,7 @@ function parseArgumentsIntoOptions(rawArgs) {
     skipPrompts: args["--yes"] || false,
     git: args["--git"] || false,
     template: args._[0],
-    runInstall: args["--install"] || false,
+    runInstall: args["--install"] || true,
   };
 }
 
