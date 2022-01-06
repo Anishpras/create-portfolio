@@ -17,6 +17,3 @@ create-project
 
 MIT
 
-## Collaborators
-
-- Dominik Kundel <hi@dominik.dev>
