@@ -21,7 +21,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "portfolio",
+    "create portfolio",
+    "create-portfolio",
+    "portfolio generator",
+    "anish",
+    "prashun"
+  ],
   "author": "Anish Prashun <anishprashun118@gmail.com>",
   "license": "MIT",
   "dependencies": {
