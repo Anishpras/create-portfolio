@@ -9,8 +9,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Dominik Kundel <hi@dominik.dev> (https://dkundel.com)",
-  "license": "MIT",
+  "author": "",
+  "license": "",
   "devDependencies": {
     "typescript": "^3.3.3333"
   }
