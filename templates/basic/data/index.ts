@@ -7,18 +7,22 @@ const data = {
     {
       name: "Lorem Ipsum",
       detail: "Lorem ipsum dolor sit amet consectet",
+      link: "#",
     },
     {
       name: "Lorem Ipsum",
       detail: "Lorem ipsum dolor sit amet consectet",
+      link: "#",
     },
     {
       name: "Lorem Ipsum",
       detail: "Lorem ipsum dolor sit amet consectet",
+      link: "#",
     },
     {
       name: "Lorem Ipsum",
       detail: "Lorem ipsum dolor sit amet consectet",
+      link: "#",
     },
   ],
 
