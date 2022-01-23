@@ -10,34 +10,27 @@ export default function Container(props) {
   const { theme, setTheme } = useTheme();
   useEffect(() => setMounted(true), []);
 
-  const { children, ...customMeta } = props;
+  const { children } = props;
   const router = useRouter();
-  const meta = {
-    title: `${data.seo.title}`,
-    description: `${data.seo.description}`,
-    image: `${data.seo.image}`,
-    type: "website",
-    ...customMeta,
-  };
 
   return (
     <div className="bg-white dark:bg-black">
       <Head>
-        <title>{meta.title}</title>
+        <title>{data.seo.title}</title>
         <meta name="robots" content="follow, index" />
-        <meta content={meta.description} name="description" />
+        <meta content={data.seo.description} name="description" />
         <meta property="og:url" content={`${data.seo.url}${router.asPath}`} />
         <link rel="canonical" href={`${data.seo.url}${router.asPath}`} />
-        <meta property="og:type" content={meta.type} />
+        <meta property="og:type" content="website" />
         <meta property="og:site_name" content={`${data.name}`} />
-        <meta property="og:description" content={meta.description} />
-        <meta property="og:title" content={meta.title} />
-        <meta property="og:image" content={meta.image} />
+        <meta property="og:description" content={data.seo.description} />
+        <meta property="og:title" content={data.seo.title} />
+        <meta property="og:image" content={data.seo.image} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content={`${data.seo.url}`} />
-        <meta name="twitter:title" content={meta.title} />
-        <meta name="twitter:description" content={meta.description} />
-        <meta name="twitter:image" content={meta.image} />
+        <meta name="twitter:title" content={data.seo.title} />
+        <meta name="twitter:description" content={data.seo.description} />
+        <meta name="twitter:image" content={data.seo.image} />
       </Head>
       <nav className="sticky-nav flex justify-between items-center max-w-4xl w-full p-8 my-0 md:mb-8 mx-auto bg-white dark:bg-black bg-opacity-60">
         <button
