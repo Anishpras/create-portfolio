@@ -1,27 +1,32 @@
 const data = {
   name: "Lorem Ipsum",
   image: "/avatar.png",
+  email: "lorem@lorem.com",
   description:
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum minima vitae quos ducimus dolorem dignissimos rem aperiam enim pariatur tempore?",
   projects: [
     {
       name: "Lorem Ipsum",
-      detail: "Lorem ipsum dolor sit amet consectet",
+      detail:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum minima vitae quos ducimus dolorem dignissimos rem aperiam enim pariatur tempore?",
       link: "#",
     },
     {
       name: "Lorem Ipsum",
-      detail: "Lorem ipsum dolor sit amet consectet",
+      detail:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum minima vitae quos ducimus dolorem dignissimos rem aperiam enim pariatur tempore?",
       link: "#",
     },
     {
       name: "Lorem Ipsum",
-      detail: "Lorem ipsum dolor sit amet consectet",
+      detail:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum minima vitae quos ducimus dolorem dignissimos rem aperiam enim pariatur tempore?",
       link: "#",
     },
     {
       name: "Lorem Ipsum",
-      detail: "Lorem ipsum dolor sit amet consectet",
+      detail:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum minima vitae quos ducimus dolorem dignissimos rem aperiam enim pariatur tempore?",
       link: "#",
     },
   ],
