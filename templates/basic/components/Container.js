@@ -66,7 +66,7 @@ export default function Container(props) {
         <div>
           <a
             download
-            href="/basicResume.pdf"
+            href={data.resume}
             rel="noopener noreferrer"
             target="_blank"
             className="p-1 sm:p-4 text-gray-900 dark:text-gray-100">

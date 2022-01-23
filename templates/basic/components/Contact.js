@@ -14,14 +14,14 @@ export default function Contact() {
   };
 
   return (
-    <div className=" flex w-full flex-col md:flex-row  gap-8 px-8 py-16 mx-auto text-green-300">
+    <div className=" flex w-full flex-col md:flex-row  gap-8 px-8 py-16 mx-auto  dark:text-green-300">
       <div className="flex flex-col justify-between">
         <div className="space-y-2">
           <h2 className="text-4xl font-bold leading-tight lg:text-5xl">
             {/* eslint-disable-next-line react/no-unescaped-entities*/}
             Let's talk!
           </h2>
-          <div className="dark:text-coolGray-400 text-white">
+          <div className="dark:text-coolGray-400 dark:text-white">
             Vivamus in nisl metus? Phasellus.
           </div>
         </div>
@@ -40,7 +40,7 @@ export default function Contact() {
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder=""
-            className="w-full p-3 rounded outline-dotted mt-2 active:outline-green-300 bg-gray-600"
+            className="w-full p-3 rounded outline-dotted mt-2 active:outline-green-300 dark:bg-gray-600"
           />
         </div>
         <div>
@@ -52,7 +52,7 @@ export default function Contact() {
             type="text"
             value={subject}
             onChange={(e) => setSubject(e.target.value)}
-            className="w-full p-3 rounded outline-dotted mt-2 active:outline-green-300 bg-gray-600"
+            className="w-full p-3 rounded outline-dotted mt-2 active:outline-green-300 dark:bg-gray-600"
           />
         </div>
         <div>
@@ -64,12 +64,12 @@ export default function Contact() {
             rows="3"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="w-full p-3 rounded outline-dotted mt-2 active:outline-green-300 bg-gray-600"></textarea>
+            className="w-full p-3 rounded outline-dotted mt-2 active:outline-green-300 dark:bg-gray-600"></textarea>
         </div>
         <button
           type="submit"
           onClick={sendMail}
-          className="w-full p-3 text-sm font-bold text-white tracking-wide uppercase rounded dark:bg-emerald-400">
+          className="w-full p-3 text-sm font-bold dark:text-white tracking-wide uppercase rounded bg-emerald-400">
           Send Message
         </button>
       </form>

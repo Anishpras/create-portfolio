@@ -2,6 +2,7 @@ const data = {
   name: "Lorem Ipsum",
   image: "/avatar.png",
   email: "lorem@lorem.com",
+  resume: "/resumeBasic",
   description:
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum minima vitae quos ducimus dolorem dignissimos rem aperiam enim pariatur tempore?",
   projects: [
