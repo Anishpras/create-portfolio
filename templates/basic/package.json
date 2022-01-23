@@ -1,15 +1,19 @@
 {
-  "name": "javascript-template",
-  "version": "1.0.0",
-  "description": "",
-  "main": "src/index.js",
+  "name": "create-portfolio-basic-template",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "keywords": [],
-  "author": "",
-  "license": "",
   "dependencies": {
-    "esm": "^3.2.18"
+    "next": "12.0.8",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "eslint": "8.7.0",
+    "eslint-config-next": "12.0.8"
   }
 }
