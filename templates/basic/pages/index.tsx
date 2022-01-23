@@ -49,10 +49,6 @@ export default function Home() {
             />
           </div>
         </div>
-        <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 text-black dark:text-white">
-          Most Popular
-        </h3>
-
         <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-8 text-black dark:text-white">
           Projects
         </h3>
