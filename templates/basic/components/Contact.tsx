@@ -28,7 +28,7 @@ export default function Contact() {
         <img src={data.image} alt="" className="p-6 md:w-96" />
       </div>
       <form
-        noValidate=""
+        noValidate={false}
         className="space-y-6 ng-untouched ng-pristine ng-valid">
         <div>
           <label htmlFor="name" className="text-sm">
@@ -61,7 +61,7 @@ export default function Contact() {
           </label>
           <textarea
             id="message"
-            rows="3"
+            rows={3}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             className="w-full p-3 rounded outline-dotted mt-2 active:outline-green-300 dark:bg-gray-600"></textarea>
