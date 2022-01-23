@@ -38,7 +38,7 @@ export default function Home() {
               <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
                 Hey, I’m{" "}
                 <RainbowHighlight color={colors[0]}>
-                  <span className="dark:text-black">Manu Arora</span>
+                  <span className="text-black">Manu Arora</span>
                 </RainbowHighlight>{" "}
               </h1>
 
