@@ -1,6 +1,5 @@
 {
   "name": "create-portfolio-basic-template",
-  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
