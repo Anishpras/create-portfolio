@@ -5,15 +5,18 @@
 ## Installation & Usage
 
 ```bash
-npm init @anishpras/create-portfolio
-# or
-npx @anishpras/create-portfolio
-# or
 npm install -g @anishpras/create-portfolio
-create-project
+
+create-portfolio
+# or
+
+npm init @anishpras/create-portfolio
+
+# or
+
+npx @anishpras/create-portfolio
 ```
 
 ## License
 
 MIT
-
