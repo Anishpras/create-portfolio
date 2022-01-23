@@ -21,9 +21,7 @@ export default function Home() {
     setColors(shuffleArray(LIGHT_COLORS));
   }, []);
   return (
-    <Container
-      title="Manu Arora - Developer, Writer, Creator"
-      description="Full-Stack developer, JavaScript enthusiast, Freelancer, Tech Blogger and a Learner. I love building products and web apps that impact millions of lives.">
+    <Container>
       <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16">
         <div className="flex flex-col md:flex-row justify-between">
           <div className="flex md:w-3/4 flex-col">
