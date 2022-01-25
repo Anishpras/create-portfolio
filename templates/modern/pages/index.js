@@ -280,7 +280,7 @@ export default function Home({ project }) {
               index,
             }) => (
               <div className="project" key={index} id={project}>
-                <Link href={project}>
+                
                   <picture>
                     <source srcSet={image} media="(min-width: 1280px)" />
                     <img
@@ -289,23 +289,23 @@ export default function Home({ project }) {
                       alt={name}
                     />
                   </picture>
-                </Link>
+               
                 <div className="project-info">
-                  <Link href={project}>
+                
                     <h2>{name}</h2>
-                  </Link>
+                
                   {description.split("\n").map((str, index) => (
                     <p key={index}>{str}</p>
                   ))}
                   {longDescription && (
-                    <Link href={project}>
+                
                       <button className="project-read-more">
                         <span>Read More</span>{" "}
                         <div className="read-more-arrow">
                           <FontAwesomeIcon icon={faChevronRight} />
                         </div>
                       </button>
-                    </Link>
+                  
                   )}
                   <h3>Tools used:</h3>
                   <ul className="tools-list">
