@@ -40,7 +40,7 @@ async function promptForMissingOptions(options) {
       type: "list",
       name: "template",
       message: "Please choose which portfolio template to use",
-      choices: ["basic", "modern"],
+      choices: ["basic", "modern", "with-blog"],
       default: defaultTemplate,
     });
   }
