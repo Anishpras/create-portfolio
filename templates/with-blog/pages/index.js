@@ -19,7 +19,15 @@ export default function Index() {
   return (
     <Container>
       <Head>
-        <title>Home - Benjamin Carlson</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="utf-8" />
+        <meta name="description" content="lorem ipsum"></meta>
+        <meta property="og:url" content="" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en" />
+        <meta property="og:image" content="" />
+        <title>Lorem Ipsum</title>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Stack
         as="main"
