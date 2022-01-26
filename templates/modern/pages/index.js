@@ -177,13 +177,13 @@ export default function Home({ project }) {
         <meta charSet="utf-8" />
         <meta
           name="description"
-          content="Website for Alexander Grattan, a software developer studying Digital Narrative and Interactive Design at the University of Pittsburgh. Skilled with React, Gatsby, Next.js, JavaScript, TypeScript, Java, Python, TailwindCSS, Sass, Node.js, Django, and GSAP."></meta>
-        <meta property="og:url" content="https://agrattan.com/" />
+          content={data.seo.description}></meta>
+        <meta property="og:url" content={data.seo.url} />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en" />
-        <meta property="og:image" content="/agrattan_OG.png" />
-        <title>Alexander Grattan | Software Developer</title>
-        <link rel="icon" href="/favicon.ico" />
+        <meta property="og:image" content={data.seo.image} />
+        <title>{data.seo.title}</title>
+        <link rel="icon" href={data.seo.favicon} />
       </Head>
       {animationComplete === false && <IntroOverlay />}
       <div className="after-animation">
@@ -202,7 +202,7 @@ export default function Home({ project }) {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    title="Download Alexander's Resume">
+                    title="Download Resume">
                     Resume
                   </motion.a>
                 </li>
@@ -299,12 +299,12 @@ export default function Home({ project }) {
           <ul className="footer-links">
             <li>
               <motion.a
-                href="https://drive.google.com/file/d/1PgvpHThs5XjTwGZgib9ZTVLa8QbhulWp/view?usp=sharing"
+                href={data.resumeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                title="Download Alexander's Resume">
+                title="Download Resume">
                 Resume
               </motion.a>
             </li>

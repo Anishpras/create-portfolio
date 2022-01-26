@@ -16,4 +16,11 @@ export const data = {
       tools: ["Next.js", "Tailwind CSS", "p5.js"],
     },
   ],
+  seo: {
+      description: "lorem ipsum",
+      url: "lorem.com",
+      image: "/large.jpeg",
+      title: "Lorem Ipsum",
+      favicon : "/favicon.ico"
+  }
 };
