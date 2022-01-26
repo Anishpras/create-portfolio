@@ -1,19 +1,11 @@
 import { useEffect, useState, useRef } from "react";
-import { projectsList } from "../components/data";
+import { data } from "../data";
 import Head from "next/head";
 import IntroOverlay from "../components/introOverlay";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import {
-  faGithub,
-  faLinkedin,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faChevronDown,
-  faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -199,43 +191,19 @@ export default function Home({ project }) {
           <nav className="home-nav">
             <div className="space-between">
               <Link href="/">
-                <div className="logo">AG</div>
+                <div className="logo">{data.initial}</div>
               </Link>
 
               <ul className="nav-list">
                 <li>
                   <motion.a
-                    href="https://drive.google.com/file/d/1PgvpHThs5XjTwGZgib9ZTVLa8QbhulWp/view?usp=sharing"
+                    href={data.resumeUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     title="Download Alexander's Resume">
                     Resume
-                  </motion.a>
-                </li>
-                <li>
-                  <motion.a
-                    href="https://github.com/GameDog9988"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    title="Go to Alexander's GitHub">
-                    <FontAwesomeIcon icon={faGithub} size="2x" />
-                    <span className="header-hidden-text">GitHub</span>
-                  </motion.a>
-                </li>
-                <li>
-                  <motion.a
-                    href="https://www.linkedin.com/in/alexander-grattan/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    title="Connect with Alexander on LinkedIn">
-                    <FontAwesomeIcon icon={faLinkedin} size="2x" />
-                    <span className="header-hidden-text">LinkedIn</span>
                   </motion.a>
                 </li>
               </ul>
@@ -257,7 +225,7 @@ export default function Home({ project }) {
 
           <p className="job-title">
             <span className="text-reveal">
-              Alexander Grattan / Software Developer
+              {`${data.name} / ${data.position}`}
             </span>
           </p>
           <button className="scroll-indicator" onClick={executeScroll}>
@@ -266,11 +234,10 @@ export default function Home({ project }) {
           </button>
         </main>
         <div className="project-container" ref={projectsRef}>
-          {projectsList.map(
+          {data.projectsList.map(
             ({
               name,
               description,
-              longDescription,
               image,
               mobileImage,
               link,
@@ -280,33 +247,18 @@ export default function Home({ project }) {
               index,
             }) => (
               <div className="project" key={index} id={project}>
-                
-                  <picture>
-                    <source srcSet={image} media="(min-width: 1280px)" />
-                    <img
-                      className="project-image"
-                      src={mobileImage}
-                      alt={name}
-                    />
-                  </picture>
-               
+                <picture>
+                  <source srcSet={image} media="(min-width: 1280px)" />
+                  <img className="project-image" src={mobileImage} alt={name} />
+                </picture>
+
                 <div className="project-info">
-                
-                    <h2>{name}</h2>
-                
+                  <h2>{name}</h2>
+
                   {description.split("\n").map((str, index) => (
                     <p key={index}>{str}</p>
                   ))}
-                  {longDescription && (
-                
-                      <button className="project-read-more">
-                        <span>Read More</span>{" "}
-                        <div className="read-more-arrow">
-                          <FontAwesomeIcon icon={faChevronRight} />
-                        </div>
-                      </button>
-                  
-                  )}
+
                   <h3>Tools used:</h3>
                   <ul className="tools-list">
                     {tools.map((item, index) => (
@@ -356,57 +308,9 @@ export default function Home({ project }) {
                 Resume
               </motion.a>
             </li>
-            <li>
-              <motion.a
-                href="https://github.com/GameDog9988"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                title="Go to Alexander's GitHub">
-                <FontAwesomeIcon icon={faGithub} size="2x" />
-                <span className="footer-hidden-text">GitHub</span>
-              </motion.a>
-            </li>
-            <li>
-              <motion.a
-                href="https://www.linkedin.com/in/alexander-grattan/"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                title="Connect with Alexander on LinkedIn">
-                <FontAwesomeIcon icon={faLinkedin} size="2x" />
-                <span className="footer-hidden-text">GitHub</span>
-              </motion.a>
-            </li>
-            <li>
-              <motion.a
-                href="https://twitter.com/agrattan0820"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                title="Follow Alexander on Twitter">
-                <FontAwesomeIcon icon={faTwitter} size="2x" />
-                <span className="footer-hidden-text">Twitter</span>
-              </motion.a>
-            </li>
           </ul>
         </footer>
       </div>
     </motion.div>
   );
-}
-
-export async function getServerSideProps(context) {
-  const { query } = context;
-
-  const project = query?.project ?? false;
-
-  return {
-    props: {
-      project,
-    }, 
-  };
 }
